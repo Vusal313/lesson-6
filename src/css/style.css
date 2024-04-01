@@ -1,0 +1,450 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+header {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    .left {
+      width: 24%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: #ffffff;
+      background-color: #e9a233;
+      padding: 20px 0px;
+
+      .icon {
+        i {
+          font-size: 1.4rem;
+        }
+      }
+
+      .text {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+
+        i {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 49%;
+      background-color: #ffffff;
+      form {
+        #Watch #item:hover {
+          background-color: #e9a233;
+        }
+
+        #Watch {
+          padding: 21px 35px;
+          outline: none;
+
+          #item {
+            background-color: #1868dd;
+          }
+        }
+      }
+      input {
+        outline: none;
+        width: 55%;
+        padding: 21px 35px 21px 5px;
+      }
+
+      span {
+        padding: 21px;
+        background-color: #e9a233;
+        transition: 0.5s;
+        &:hover {
+          background-color: green;
+        }
+
+        i {
+          font-size: 14px;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .right {
+      width: 24%;
+
+      .btn {
+        background-color: #ffffff; /* İlk arka plan rengi */
+        color: #000000;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.4s ease-out; /* Geçiş efekti */
+      }
+
+      .btn:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -100%; /* İlk başlangıç noktası sağdan başlamak için */
+        width: 100%;
+        height: 100%;
+        background-color: #000000; /* İkinci arka plan rengi */
+        transition: right 0.4s ease-out;
+        z-index: 1;
+        /* Geçiş efekti */
+      }
+
+      .btn:hover {
+        background-color: transparent;
+        color: #ffffff; /* Hover durumunda arka planı temizle */
+      }
+
+      .btn:hover:before {
+        right: 0;
+        z-index: -1; /* Sağdan sola kaydırma efekti */
+      }
+
+      .btn {
+        width: 100%;
+        border: 1px black solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 10px 25px;
+      }
+    }
+  }
+}
+
+.section1 {
+  width: 100%;
+  height: 100vh;
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+
+    margin: 0 auto;
+    background-image: url(../img/slider_bg_81.jpg);
+    background-repeat: no-repeat;
+    background-size: 68% 70%;
+    margin-top: 50px;
+
+    .photo {
+      width: 50%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      img {
+        margin-left: 275px;
+        width: 450px;
+      }
+    }
+    .info {
+      margin-top: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+
+      .text {
+        p {
+          margin-bottom: 20px;
+          font-size: 1.4rem;
+          color: #ffffff;
+        }
+        h1 {
+          width: 80%;
+          margin-bottom: 20px;
+          font-size: 2rem;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+          font-weight: 900;
+          color: #ffffff;
+        }
+      }
+
+      .button {
+        margin-top: 30px;
+
+        .btn2 {
+          padding: 15px 50px;
+          border: 1px solid rgb(3, 3, 129);
+          font-size: 1.1rem;
+          transition: 0.6s;
+          &:hover {
+            background-color: #000000;
+            color: #ffffff;
+          }
+        }
+
+        .btn3 {
+          padding: 16.5px 45px;
+          border-radius: 2px;
+          background-color: #e9a233;
+          color: #000000;
+          font-size: 1.1rem;
+          transition: 0.6s;
+          &:hover {
+            background-color: green;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .holiday {
+    display: flex;
+    justify-content: space-around;
+
+    img {
+      width: 30%;
+      margin-bottom: 50px;
+      cursor: pointer;
+    }
+  }
+}
+.section2 {
+  width: 100%;
+  height: 100vh;
+
+  .container {
+    height: 100vh;
+    margin-top: 350px;
+
+    .title {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        width: 30%;
+      }
+
+      .right {
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1.2rem;
+
+        a {
+          color: #353535;
+          transition: 0.4s;
+          &:hover {
+            color: #e9a233;
+          }
+        }
+      }
+    }
+
+    .catagories {
+      width: 100%;
+      display: flex;
+      border: 1px solid grey;
+      margin-top: 10px;
+
+      .left1,
+      .left2,
+      .center,
+      .right {
+        width: 25%;
+        margin: 20px 0px;
+        padding: 0px 15px;
+        border-right: 1px solid grey;
+
+        del {
+          color: #000000;
+        }
+        .Xpeed {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          &:hover {
+            img {
+              filter: grayscale(90%);
+            }
+          }
+
+          i {
+            color: #e9a233;
+          }
+          img {
+            width: 150px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+.section3 {
+  width: 100%;
+  height: 100vh;
+  .container {
+    display: flex;
+    height: 100vh;
+
+    .cards {
+      .card1 {
+        background-image: url(../img/laptop1-1-1.png);
+
+        background-repeat: no-repeat, no-repeat; /* Her bir resim için tekrarlama yok */
+        background-position: 110px 0px; /* İlk resim solda, ikinci resim sağda yer alacak şekilde ayarlanıyor */
+        background-size: 80%, 50%;
+        width: 500px;
+        height: 280px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        transition: 0.5s;
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        .button {
+          background-color: #ffffff; /* İlk arka plan rengi */
+          color: #000000;
+          border-radius: 5px;
+          background-color: #e9a233;
+          border: none;
+          padding: 12px 20px;
+          width: 120px;
+          z-index: 3;
+          font-size: 16px;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+          font-weight: bold;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          transition: background-color 0.4s ease-out; /* Geçiş efekti */
+        }
+
+        .button:before {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          right: -100%; /* İlk başlangıç noktası sağdan başlamak için */
+          width: 100%;
+          height: 100%;
+          background-color: green; /* İkinci arka plan rengi */
+          transition: right 0.4s ease-out;
+          z-index: 1;
+          /* Geçiş efekti */
+        }
+
+        .button:hover {
+          background-color: transparent;
+          color: #ffffff; /* Hover durumunda arka planı temizle */
+        }
+
+        .button:hover:before {
+          right: 0%;
+          top: 0;
+          z-index: -1; /* Sağdan sola kaydırma efekti */
+        }
+      }
+
+      .card {
+        background-image: url(../img/hand_watch1-1-1.png);
+
+        background-repeat: no-repeat, no-repeat; /* Her bir resim için tekrarlama yok */
+        background-position: 30px 0px; /* İlk resim solda, ikinci resim sağda yer alacak şekilde ayarlanıyor */
+        background-size: 80%, 50%;
+        width: 500px;
+        height: 280px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        transition: 0.5s;
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        .button {
+          background-color: #ffffff; /* İlk arka plan rengi */
+          color: #000000;
+          border-radius: 5px;
+
+          background-color: #e9a233;
+          border: none;
+          padding: 12px 20px;
+          width: 120px;
+          z-index: 3;
+          font-size: 16px;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+          font-weight: bold;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          transition: background-color 0.4s ease-out; /* Geçiş efekti */
+        }
+
+        .button:before {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          right: -100%; /* İlk başlangıç noktası sağdan başlamak için */
+          width: 100%;
+          height: 100%;
+          background-color: green; /* İkinci arka plan rengi */
+          transition: right 0.4s ease-out;
+          z-index: 1;
+          /* Geçiş efekti */
+        }
+
+        .button:hover {
+          background-color: transparent;
+          color: #ffffff; /* Hover durumunda arka planı temizle */
+        }
+
+        .button:hover:before {
+          right: 0%;
+          top: 0;
+          z-index: -1; /* Sağdan sola kaydırma efekti */
+        }
+      }
+    }
+
+    .hotsale{
+
+      .intel{
+        width: 300px;
+        height: 500px;
+        border: 1px soil red;
+        background-image: url(../img/laptop_slider_2_406x628-1.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+      }
+
+    }
+  }
+}
